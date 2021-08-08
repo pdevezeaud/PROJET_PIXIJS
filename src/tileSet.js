@@ -5,6 +5,7 @@ let Application = PIXI.Application;
 resources = PIXI.loader.resources,
 Sprite = PIXI.Sprite;
 Rectangle = PIXI.Rectangle
+TextureCache = PIXI.utils.TextureCache,
 
 let app = new Application(
   {
