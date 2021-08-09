@@ -1,11 +1,11 @@
 
 //alias
-let Application = PIXI.Application;
+let Application = PIXI.Application,
 // loader = PIXI.loader,
 resources = PIXI.loader.resources,
-Sprite = PIXI.Sprite;
-Rectangle = PIXI.Rectangle
-TextureCache = PIXI.utils.TextureCache,
+Sprite = PIXI.Sprite,
+Rectangle = PIXI.Rectangle,
+TextureCache = PIXI.utils.TextureCache
 
 let app = new Application(
   {
@@ -32,17 +32,17 @@ function setup() {
 let texture = TextureCache['../images/tileset.png'];
 
 
-let rectangle = new Rectangle(192, 128, 64, 64);
+let rectangle = new Rectangle(320,320,64,64);
 
 texture.frame = rectangle;
 
-let rocket = new Sprite(texture);
+let bombe = new Sprite(texture);
 
-rocket.x = 32;
-rocket.y = 32;
+bombe.x = 64;
+bombe.y = 64;
 
 
-app.stage.addChild(rocket);
+app.stage.addChild(bombe);
 
 app.renderer.render(app.stage);
 
